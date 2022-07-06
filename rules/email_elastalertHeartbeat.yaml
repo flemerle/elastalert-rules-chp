@@ -1,0 +1,21 @@
+name: Elastalert Heartbeat
+
+# Type of alert.
+type: any
+
+# Index to search, wildcard supported
+index: elastalert_status_status
+
+realert:
+  hours: 24
+
+# The alert is use when a match is found
+alert:
+- "email"
+
+alert_text: "Elastalert2 heartbeat, pulse rate: 1/day."
+alert_text_type: alert_text_only
+
+# a list of email addresses to send alerts to
+email:
+- "alertes@talcsi.com"
